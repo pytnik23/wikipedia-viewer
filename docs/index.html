@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wikipedia viewer</title>
+
+	<link rel="stylesheet" href="css/combined.css">
+</head>
+<body>
+	<h1>Wikipedia viewer</h1>
+	<div class="search-output">
+		<div class="search-query">Results for search query &#8220<span class="search-query__text"></span>&#8221</div>
+		<div class="search-results"></div>
+	</div>
+	<div class="search-wrapper">
+		<div class="search">
+			<input class="search__input" type="search" placeholder="Search" autofocus>
+			<button class="search__button" type="button">Search</button>
+			<a href="https://en.wikipedia.org/wiki/Special:Random" class="search__random-button" target="_blank">Random</a>
+		</div>
+	</div>
+
+	<script src="js/combined.js"></script>
+</body>
+</html>
