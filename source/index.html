@@ -11,19 +11,22 @@
 </head>
 <body>
 	<h1>Wikipedia viewer</h1>
-	<div class="search-output">
-		<div class="search-query">Results for search query &#8220<span class="search-query__text"></span>&#8221</div>
-		<div class="search-results"></div>
-	</div>
 	<div class="search-wrapper">
 		<div class="search">
-			<input class="search__input" type="search" placeholder="Search" autofocus>
-			<button class="search__button" type="button">Search</button>
-			<a href="https://en.wikipedia.org/wiki/Special:Random" class="search__random-button" target="_blank">Random</a>
+			<input id="input" class="search__input" type="search" placeholder="Search" autofocus>
+			<!-- <button class="search__button" type="button">Search</button>
+			<a href="https://en.wikipedia.org/wiki/Special:Random" class="search__random-button" target="_blank">Random</a> -->
 		</div>
 	</div>
+	<div class="search-output">
+		<div class="search-query">Results for search query &#8220<span class="search-query__text"></span>&#8221:</div>
+		<div class="search-results"></div>
+	</div>
+	<canvas id="canvas"></canvas>
 
 	<!-- build:js js/combined.js -->
+	<script src="js/flyingLetters.js"></script>
+	<script src="js/background.js"></script>
 	<script src="js/main.js"></script>
 	<!-- endbuild -->
 </body>

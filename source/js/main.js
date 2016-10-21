@@ -5,13 +5,21 @@
 		searchWrapper 	= document.querySelector('.search-wrapper'),
 		searchOutput 	= document.querySelector('.search-output'),
 		searchQueryText = document.querySelector('.search-query__text'),
-		searchResults 	= document.querySelector('.search-results');
+		searchResults 	= document.querySelector('.search-results'),
+		canvas			= document.querySelector('canvas');
 
-	searchButton.addEventListener('click', getData);
+	//searchButton.addEventListener('click', getData);
 	searchInput.addEventListener('keypress', function(e) {
 		if (e.keyCode === 13) {
+			if(this.value === '') return;
 			getData();
-			this.blur();
+			searchInput.blur();
+
+			if( canvas ) {
+				setTimeout(function() {
+					searchOutput.insertBefore(canvas, searchOutput.firstChild);
+				},1000);
+			}
 		}
 	});
 
@@ -65,8 +73,11 @@
 		var response = arr,
 			fragment = document.createDocumentFragment();
 
-		searchWrapper.style.height = '10%';
+		searchWrapper.style.height = '65px';
 		searchQueryText.innerText = response[0];
+		if (!response[1][0]) {
+			searchResults.innerText = 'No matches found.'
+		}
 		for (var i = 0; i < response[1].length; i++) {
 			var anchor 	= document.createElement('a'),
 				h3 		= document.createElement('h3'),
