@@ -21,7 +21,7 @@ gulp.task('bower', function () {
 });
 
 gulp.task('css', function() {
-	return gulp.src('source/sass/**/*.sass')
+	return gulp.src('source/sass/**/*.scss')
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 		.pipe(autoprefixer({ browsers: ['> 0%'], cascade: true}))
 		.pipe(gulp.dest('source/css'))
@@ -87,7 +87,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('default', ['browser-sync', 'css'], function() {
-	gulp.watch('source/sass/**/*.sass', ['css']);
+	gulp.watch('source/sass/**/*.scss', ['css']);
 	gulp.watch('source/*.html', browserSync.reload);
 	gulp.watch('source/js/**/*.js', browserSync.reload);
 	gulp.watch('bower.json', ['bower']);

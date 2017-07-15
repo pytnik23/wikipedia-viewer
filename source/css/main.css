@@ -48,7 +48,8 @@ h1 {
 .search__input {
   width: 200px;
   border: none;
-  padding: 10px 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
   border-bottom: solid 1px #fff;
   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
@@ -60,10 +61,8 @@ h1 {
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
   background-position: -200px 0;
-  -webkit-background-size: 200px 100%;
-     -moz-background-size: 200px 100%;
-       -o-background-size: 200px 100%;
-          background-size: 200px 100%;
+  -moz-background-size: 200px 100%;
+       background-size: 200px 100%;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 14px;
